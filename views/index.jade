@@ -1,0 +1,12 @@
+extends layout
+
+block content
+  p Redirect to #{originUrl}
+
+  script(type='text/javascript').
+    setTimeout(function() {
+      location.replace("#{originUrl}")
+    },100);
+
+
+

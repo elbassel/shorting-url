@@ -1,0 +1,50 @@
+openapi: 3.0.0
+info:
+  title: Appetito
+  version: '1.0'
+  description: Base API
+servers:
+  - url: 'http://localhost:3000'
+paths:
+  /short/{key}:
+    get:
+      summary: Redirects you the needed url
+      tags: []
+      parameters:
+        - name: key
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+
+
+  /urls:
+   post:
+      summary: Place order
+      tags: []
+      description: ''
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                originUrl:
+                  type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  originUrl:
+                    type: string
+                  key:
+                    type: string
+        '500':
+          description: This Url already generated
