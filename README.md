@@ -1,7 +1,7 @@
 # Appetito
 Coding challenge
 ## The problem:
-Task: Vending Machine:
+Task: Shortening URL:
 - High level design for a URL Shortening system such as goo.gl or bit.ly the idea is to design a service that would generate a shorter URl for the 		long URLS
 
 
